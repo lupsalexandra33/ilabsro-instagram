@@ -50,6 +50,8 @@ State the sample size and the confidence plainly. 40 Reels across 6 accounts sup
 
 For the top formulas that are IL-allowed (`yes`/`adapt`), write **IL's version**: a hook from IL's own approved material, in the shape that's working. Hand it to `ig-hooks` / `ig-ship`. A formula that's working but marked `no` stays a note, not a plan.
 
+If the output is delivered as a page or Artifact, it uses the IL visual system: see "Pages and artifacts" in `../../voice/il-instagram-voice.md` (IL tokens and fonts, no AI tells, `design_tells.py` before publishing).
+
 `ig-hooks`, `ig-plan` and `ig-ship` read `swipe.md`. After one run, the rest of the plugin works from evidence instead of defaults.
 
 Nothing is posted, followed, liked or messaged by this skill.

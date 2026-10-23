@@ -1,9 +1,19 @@
 {
   "name": "ilabsro-instagram",
   "displayName": "Innovation Labs Instagram",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Instagram strategy and operations for Innovation Labs: ship a post end to end (ig-ship), IL hook formulas and scoring, captions, weekly planning, repurposing, stories, research, audits, profile and community. Visuals, Reels and brand rules come from the ilabsro-design plugin, which must be installed alongside.",
-  "author": { "name": "Innovation Labs" },
-  "license": "MIT (adapted scripts) — see LICENSE-instagram-agent-skill.txt",
-  "keywords": ["innovation-labs", "instagram", "reels", "captions", "hooks", "content-planning", "social"]
+  "author": {
+    "name": "Innovation Labs"
+  },
+  "license": "MIT (adapted scripts) \u2014 see LICENSE-instagram-agent-skill.txt",
+  "keywords": [
+    "innovation-labs",
+    "instagram",
+    "reels",
+    "captions",
+    "hooks",
+    "content-planning",
+    "social"
+  ]
 }

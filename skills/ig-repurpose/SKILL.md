@@ -44,4 +44,6 @@ SUN  STORY     quote frame           "<exact line>"  src §1
 Say "ship Tuesday" and I'll run ig-ship on it.
 ```
 
+If the output is delivered as a page or Artifact, it uses the IL visual system: see "Pages and artifacts" in `../../voice/il-instagram-voice.md` (IL tokens and fonts, no AI tells, `design_tells.py` before publishing).
+
 Then make them one at a time through `ig-ship`, after the human selects. Don't produce four finished assets at once: they'd blur together and none would get proper review.

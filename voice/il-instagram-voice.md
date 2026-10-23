@@ -13,6 +13,15 @@ Every skill in `ilabsro-instagram` reads this file before writing. It translates
 - Calls to action name the destination ("Applications open · link in bio"), and there is only one per post.
 - Nothing that looks AI-generated: follow `ilabsro-design/design-system/AI_TELLS.md` (no emoji, em dashes, sparkles, "it's not X, it's Y", glow orbs, glassmorphism, bento or three-card filler, fake stats) in captions, comments, DMs, stories and every visual.
 
+## Pages and artifacts this plugin produces
+
+Plans, audits, swipe files, profile reviews, review blocks: whenever an `ilabsro-instagram` output is a page or an Artifact, not just chat text, it is still Innovation Labs material. Build it with `ilabsro-design`'s visual system, not a look chosen for the occasion:
+- colors only from `ilabsro-design/design-system/TOKENS.css` (teal-led Light; purple `ax` only as a semantic accent); type only Poppins, IBM Plex Mono and Caveat (one note at most);
+- a working document gets the utilitarian treatment (`website-maker`'s reading-surface rules), with no hero and no decoration;
+- no coloured left borders, glass, gradients behind text or any other pattern in `ilabsro-design/design-system/AI_TELLS.md`;
+- run `ilabsro-design:human-pass` → `design_tells.py` on the page before publishing.
+These brand rules take precedence over any general "pick distinctive fonts" design guidance.
+
 ## Instagram translation
 
 - **Language:** English.

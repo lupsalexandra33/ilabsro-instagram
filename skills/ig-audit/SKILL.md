@@ -55,4 +55,6 @@ DO MORE:   <one thing>
 NEXT:      ig-plan gets these; il-hooks/swipe priorities updated
 ```
 
+If the output is delivered as a page or Artifact, it uses the IL visual system: see "Pages and artifacts" in `../../voice/il-instagram-voice.md` (IL tokens and fonts, no AI tells, `design_tells.py` before publishing).
+
 Hand the conclusions to `ig-plan`, and add any proven formula preference to `~/.claude/ilabs/instagram/swipe.md` under an "IL's own evidence" heading.

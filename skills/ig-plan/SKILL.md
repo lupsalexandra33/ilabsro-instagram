@@ -64,4 +64,6 @@ ENGAGE      5 ecosystem / 3 peers / 2 founders: <handles>
 Say "ship Tuesday" and I'll run ig-ship on it.
 ```
 
+If the output is delivered as a page or Artifact, it uses the IL visual system: see "Pages and artifacts" in `../../voice/il-instagram-voice.md` (IL tokens and fonts, no AI tells, `design_tells.py` before publishing).
+
 Write it to `~/.claude/ilabs/instagram/plan.md`. Nothing is scheduled or posted. This is a plan the team runs.

@@ -31,4 +31,6 @@ Run every rewrite through `ilabsro-design:human-pass` and give copy-ready blocks
 
 Score table, the fix-first rewrites, then a re-score with an honest delta. If the rewrite reaches 82 and not 98, say 82 and what the rest needs (usually pinned posts that don't exist yet, a grid habit and a story habit, none of which is a rewrite).
 
+If the output is delivered as a page or Artifact, it uses the IL visual system: see "Pages and artifacts" in `../../voice/il-instagram-voice.md` (IL tokens and fonts, no AI tells, `design_tells.py` before publishing).
+
 Nothing is changed on Instagram by this skill. The team edits each field.

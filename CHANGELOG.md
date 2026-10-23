@@ -18,6 +18,9 @@ First version. Requires **`ilabsro-design` 0.7.0+** to be installed alongside.
 ### Validated example
 `examples/ship-test-my-thinking/`: a full `ig-ship` run with hooks (round 1 rejected a weak hook), brief, a rendered Reel, human-pass, a READY caption, the cover check, the live Artifact and the review block. `ship.md` lists what the run caught.
 
+### 0.1.1 (2026-10-23)
+- Pages and Artifacts produced by `ig-plan`, `ig-audit`, `ig-profile`, `ig-repurpose` and `ig-viral` now use the IL visual system (TOKENS.css colors, Poppins / IBM Plex Mono / Caveat, no AI tells, `design_tells.py` before publishing). Found in the first real test: an `ig-plan` artifact chose its own fonts and palette.
+
 ## How to validate
 
 ```bash
