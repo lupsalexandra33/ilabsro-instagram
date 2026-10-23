@@ -16,7 +16,7 @@ Every skill in `ilabsro-instagram` reads this file before writing. It translates
 ## Instagram translation
 
 - **Language:** English.
-- **Who we're talking to:** early-stage founders and builders, plus the mentors, partners and teams around them. Narrow this per post from the brief. Don't invent a narrower audience.
+- **Who we're talking to:** student teams (bachelor's and master's, under 27), university spin-off and researcher teams, and mixed teams of students and early-stage founders building tech startups in Romania, plus the mentors, universities and partners around them. Narrow this per post from the brief. Don't invent a narrower audience.
 - **Lens defaults** (from `ilabsro-design`): `friendly-lens` for teaching and founder-to-founder posts, `formal-lens` for applications, deadlines, partners and logistics, `jokey-lens` only as a light, occasional twist.
 - **What IL posts are for:** teaching a useful founder or innovation concept, or communicating a real IL update (program, event, application, recap). Not personal-brand growth content.
 - **Hooks:** write only from `tools/il-hooks.json` formulas marked `il_use: yes`, or `adapt` ones when their condition is met. No "steal this", no insider secrets, no superlatives.
@@ -27,14 +27,24 @@ Every skill in `ilabsro-instagram` reads this file before writing. It translates
 
 The rules above are fixed. This section is what makes drafts sound like IL rather than like "a brand". Fill it from real, published IL posts. Never fill it with guesses.
 
-- **Handle:** `{{fill in}}`
-- **3–5 IL captions or Reel scripts that sound most like us** (paste them verbatim):
+- **Handle:** @ilabsro
+- **3–5 IL captions or Reel scripts that sound most like us** (paste them verbatim from @ilabsro; still to fill, this is the part that sets the voice):
   1.
   2.
   3.
-- **Words we actually use:**
-- **Words we never use** (besides the global hype list in `human-pass`):
-- **Current programs / events / dates that may be mentioned publicly:**
-- **Things we never post about, or names and numbers that can't be public:**
+- **Words we actually use:** (to fill from the posts above)
+- **Words we never use** (besides the global hype list in `human-pass`): (to fill)
+- **Public facts we may use** (from press coverage, Oct 2026; confirm with the team before posting, and update each edition):
+  - Innovation Labs is a pre-acceleration program for tech startups, organised by Asociația Tech Lounge, running since 2013. 2026 was the 14th edition. *(the same article also says "13 years"; confirm which one to use)*
+  - 2026 format: one national 30-hour hackathon in Bucharest (21–22 March 2026, at UNSTPB), then a 10-week pre-acceleration program in Bucharest, ending in Demo Day.
+  - 2026 numbers: 221 projects registered, 127 teams qualified, 41 admitted to mentorship; 27 at the Startups' Fair, 17 in the Demo Day final.
+  - Demo Day 2026: 25 May 2026, Opera Națională București. Winners: AICoustic (Grand Prize), DistriOS (Best Emerging Start-up), Intrudify (Best Product), Nabu (Public Vote).
+  - Early Game Ventures allocated €500,000 for investment. One finalist received a preliminary term sheet; no final agreement had been announced at the time.
+  - Who can apply (2026): teams of up to 4 or individuals. Student-only teams (under 27; one PhD under 30 allowed), university spin-offs, or mixed teams with at least one active student. Verticals: Agriculture, Consumer Tech, Cybersecurity, DevTools, Digital Health, Digital Infrastructure, Retail & E-Commerce, Sustainability.
+  - Program parts: bootcamps, mentoring, hybrid workshops, "Unplugged" sessions, the Innovation Labs Academy platform, AI Validation Bootcamps.
+  - Universities: 24–25 partner universities in 12–13 cities *(sources differ; confirm)*.
+  - Strategic partners (2026): Romanian-American Foundation, UNSTPB, Early Game Ventures. Main: BRD, Orange Romania, Eviden, eMAG. Institutional: UEFISCDI.
+  - Sources: spotmedia.ro (Demo Day 2026 final), startupcafe.ro (2026 registrations).
+- **Things we never post about, or names and numbers that can't be public:** (to fill with the team: e.g. term-sheet details, team results without consent)
 
 If this section is empty when a skill needs it, ask the user once for 3 real IL posts, then propose the filled section for approval. Don't write it silently.
