@@ -1,0 +1,131 @@
+/* Innovation Labs Reel Kit — stage, tokens and type roles for 1080x1920 Reels.
+   Token values mirror design-system/TOKENS.css (Light). Keep them in sync; do not invent new brand colors. */
+
+:root {
+  --teal: #0095AC;
+  --teal-deep: #016462;
+  --teal-ink: #016462;
+  --bright: #72ECE7;
+  --logo-ink: #2B6363;
+  --on-brand: #FFFFFF;
+  --surface-page: #FFFFFF;
+  --surface-alt: #F4FBFB;
+  --surface: #FFFFFF;
+  --surface-tint: #EAF7F7;
+  --ink: #10201F;
+  --ink-muted: #3C5052;
+  --ink-subtle: #4A5E60;
+  --line: #D6E4E5;
+  --line-soft: #E3EDEE;
+  --line-strong: #9CC3C6;
+  --ax: #954BBC;
+  --ax-ink: #6B2E8C;
+  --ax-tint: #F1E7F8;
+  --issue: #A8453A;
+  --grad-surface: linear-gradient(180deg, #F4FBFB 0%, #E4F4F4 100%);
+  --grad-brand: linear-gradient(115deg, #068499, #065F5C);
+
+  --font: Poppins, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-hand: Caveat, "Segoe Print", cursive;
+
+  /* Conservative critical-content box for 1080x1920. Verify on a phone preview. */
+  --safe-x0: 90px;  --safe-x1: 990px;
+  --safe-y0: 250px; --safe-y1: 1550px;
+}
+
+/* Player page chrome (outside the stage): one deliberate dark look in every theme */
+:root { --page-bg: #0D1515; --page-fg: #CFEEEE; color-scheme: dark; }
+html, body { margin: 0; height: 100%; background: var(--page-bg); color: var(--page-fg); }
+body { display: grid; place-items: center; overflow: hidden; }
+body.il-render { display: block; background: #000; }
+
+.il-viewport { width: 1080px; height: 1920px; transform-origin: 0 0; position: relative; }
+.il-stage {
+  width: 1080px; height: 1920px; position: relative; overflow: hidden;
+  background: var(--surface-alt); color: var(--ink);
+  font-family: var(--font); -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision;
+}
+.il-stage * { box-sizing: border-box; }
+.il-scene { position: absolute; inset: 0; isolation: isolate; } /* each scene is its own stacking context, so its marks never paint over the next scene */
+.il-abs { position: absolute; }
+
+/* Grounds */
+.il-ground-white { background: var(--surface-page); }
+.il-ground-alt { background: var(--surface-alt); }
+.il-ground-tint { background: var(--surface-tint); }
+.il-ground-soft { background: var(--grad-surface); }
+.il-ground-teal { background: var(--grad-brand); color: var(--on-brand); }
+
+/* Type roles — sized for a phone held at arm's length. Never go under 34px for anything the viewer must read. */
+.il-h1   { font-weight: 700; font-size: 92px; line-height: 1.06; letter-spacing: -0.025em; margin: 0; }
+.il-h2   { font-weight: 700; font-size: 70px; line-height: 1.1;  letter-spacing: -0.02em;  margin: 0; }
+.il-h3   { font-weight: 600; font-size: 52px; line-height: 1.18; letter-spacing: -0.012em; margin: 0; }
+.il-body { font-weight: 500; font-size: 44px; line-height: 1.32; color: var(--ink-muted); margin: 0; }
+.il-hand { font-family: var(--font-hand); font-weight: 600; font-size: 104px; line-height: 1; color: var(--teal-deep); margin: 0; }
+.il-hand-sm { font-family: var(--font-hand); font-weight: 600; font-size: 66px; line-height: 1.05; color: var(--teal-deep); margin: 0; }
+.il-mono { font-family: var(--font-mono); font-weight: 500; font-size: 30px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-subtle); margin: 0; }
+.il-note { font-weight: 400; font-size: 34px; line-height: 1.35; color: var(--ink-subtle); margin: 0; }
+.il-teal { color: var(--teal); }
+.il-teal-ink { color: var(--teal-ink); }
+.il-ax { color: var(--ax-ink); }
+
+/* Paper / note surfaces (use sparingly — restrained notebook cues, not a template) */
+.il-card {
+  background: var(--surface); border: 2px solid var(--line); border-radius: 28px;
+  box-shadow: 0 18px 40px -24px rgba(1, 100, 98, .28);
+}
+.il-sticky {
+  background: #FFFFFF; border-radius: 10px; padding: 26px 30px;
+  box-shadow: 0 14px 28px -18px rgba(16, 32, 31, .35), 0 1px 0 rgba(16,32,31,.06);
+  font-family: var(--font-hand); font-weight: 600; font-size: 60px; line-height: 1.02; color: var(--ink);
+}
+.il-sticky.tint { background: var(--surface-tint); }
+.il-sticky.teal { background: var(--teal-deep); color: #fff; }
+
+/* Marks overlay (underline / circle / strike / arrow / check) */
+.il-marks { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; z-index: 5; }
+.il-marks.behind { z-index: 0; }
+.il-marks path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.il-front { position: relative; z-index: 2; }
+
+/* Chat (iMessage-inspired, IL palette — not a UI replica) */
+.il-chat { position: absolute; overflow: hidden; }
+.il-chat-track { position: absolute; left: 0; right: 0; top: 0; display: flex; flex-direction: column; gap: 18px; padding: 8px 6px 40px; }
+.il-chat-head { display: flex; align-items: center; gap: 22px; padding: 0 6px 26px; border-bottom: 2px solid var(--line-soft); margin-bottom: 22px; }
+.il-chat-avatar { width: 84px; height: 84px; border-radius: 50%; background: var(--surface-tint); color: var(--teal-deep);
+  display: grid; place-items: center; font-weight: 700; font-size: 36px; overflow: hidden; flex: none; }
+.il-chat-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.il-chat-name { font-weight: 600; font-size: 40px; color: var(--ink); }
+.il-chat-sub { font-family: var(--font-mono); font-size: 24px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-subtle); }
+.il-bubble {
+  max-width: 78%; padding: 26px 34px; border-radius: 44px; font-size: 46px; line-height: 1.28; font-weight: 500;
+  position: relative; will-change: transform, opacity;
+}
+.il-bubble.them { align-self: flex-start; background: #FFFFFF; color: var(--ink); border: 2px solid var(--line-soft);
+  border-bottom-left-radius: 14px; transform-origin: 0% 100%; }
+.il-bubble.me { align-self: flex-end; background: var(--teal-deep); color: #FFFFFF; border-bottom-right-radius: 14px; transform-origin: 100% 100%; }
+.il-bubble.me.bright { background: var(--teal); }
+.il-bubble .il-react { position: absolute; top: -30px; right: -14px; background: #fff; border: 2px solid var(--line-soft);
+  border-radius: 999px; padding: 6px 12px; line-height: 0; box-shadow: 0 6px 14px -8px rgba(0,0,0,.3); }
+.il-receipt { align-self: flex-end; font-size: 26px; color: var(--ink-subtle); margin-top: -8px; padding-right: 10px; }
+.il-typing { position: absolute; left: 6px; display: flex; gap: 12px; padding: 30px 34px; background: #fff; border: 2px solid var(--line-soft);
+  border-radius: 44px; border-bottom-left-radius: 14px; transform-origin: 0% 100%; }
+.il-typing i { width: 18px; height: 18px; border-radius: 50%; background: var(--line-strong); display: block; }
+
+/* Outro */
+.il-outro { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 56px; }
+.il-outro-logo { width: 720px; height: auto; display: block; }
+.il-outro-mascot { width: 440px; height: auto; display: block; }
+.il-outro-cta { font-family: var(--font-mono); font-weight: 500; font-size: 32px; letter-spacing: .08em; text-transform: uppercase; color: var(--teal-ink); }
+
+/* Preview chrome (never rendered into the MP4) */
+.il-ui { position: fixed; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 14px;
+  padding: 12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  font: 13px/1.2 ui-monospace, monospace; color: var(--page-fg); background: rgba(0,0,0,.6); z-index: 100; }
+.il-ui button:focus-visible, .il-ui input:focus-visible { outline: 2px solid #72ECE7; outline-offset: 2px; }
+.il-ui input[type=range] { flex: 1; }
+.il-ui button { font: inherit; color: inherit; background: #1B3434; border: 1px solid #2F5555; border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+.il-guides { position: absolute; inset: 0; pointer-events: none; z-index: 50; display: none; }
+.il-guides.on { display: block; }
+.il-guides div { position: absolute; border: 3px dashed rgba(168, 69, 58, .8); }

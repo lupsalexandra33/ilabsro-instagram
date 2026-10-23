@@ -1,0 +1,14 @@
+Write your rough version first. Then hand it to AI and ask it to find the holes.
+
+If AI writes your startup strategy for you, you end up in the pitch defending thinking that isn't yours. Write it first, even badly. Now AI is a sparring partner, not a ghostwriter.
+
+Three questions founders can ask it:
+Where is this weakest?
+What am I assuming without evidence?
+What would a skeptical investor ask first?
+
+Fix what it finds. Ask again. You still make the call.
+
+Save this for the next time you open a blank chat.
+
+#startupstrategy #foundertips

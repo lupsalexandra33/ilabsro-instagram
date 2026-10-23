@@ -1,0 +1,10 @@
+
+HOOK RANKING
+==============================================================================
+->  80.1 STRONG  Don't ask AI to think for you. Ask it to test your thinking.
+        weakest: STAKES (70)
+    52.2 OK      Don't ask AI to think for you.
+        weakest: SPECIFICITY (15)
+
+Shoot the top one. If the top one is under 50, none of these are the hook.
+

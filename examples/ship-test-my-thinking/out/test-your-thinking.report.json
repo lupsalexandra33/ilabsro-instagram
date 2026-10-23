@@ -1,0 +1,122 @@
+{
+  "input": "/home/claude/work/ilabsro-instagram/examples/ship-test-my-thinking/reel/reel.html",
+  "output": "/home/claude/work/ilabsro-instagram/examples/ship-test-my-thinking/out/test-your-thinking.mp4",
+  "meta": {
+    "title": "Test your thinking",
+    "family": "chat",
+    "ending": "logo-teal"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "codec": "h264",
+    "profile": "High",
+    "pix_fmt": "yuv420p",
+    "fps": 30,
+    "duration": 26.9,
+    "frames": 807,
+    "audio": false,
+    "size_mb": 1.32
+  },
+  "format_issues": [],
+  "lint": [],
+  "onscreen": [
+    {
+      "at": 0,
+      "until": 11.3,
+      "label": "hook",
+      "text": "Don't ask AI to think for you."
+    },
+    {
+      "at": 1,
+      "until": 11.3,
+      "label": "hook",
+      "text": "Ask it to test your thinking."
+    },
+    {
+      "at": 1.9,
+      "until": 11.3,
+      "label": "chat",
+      "text": "Pitch is Thursday. I'll just ask AI to write our strategy."
+    },
+    {
+      "at": 3.9,
+      "until": 11.3,
+      "label": "chat",
+      "text": "Before that: what do we think our strategy is?"
+    },
+    {
+      "at": 5.7,
+      "until": 11.3,
+      "label": "chat",
+      "text": "No idea yet. That's why I'm asking it."
+    },
+    {
+      "at": 7.4,
+      "until": 11.3,
+      "label": "chat",
+      "text": "Write our rough version first."
+    },
+    {
+      "at": 8.4,
+      "until": 11.3,
+      "label": "chat",
+      "text": "Then ask AI to tear it apart."
+    },
+    {
+      "at": 9.6,
+      "until": 11.75,
+      "label": "chat",
+      "text": "Ok. Writing it now."
+    },
+    {
+      "at": 11.55,
+      "until": 18,
+      "label": "s2",
+      "text": "What to ask instead"
+    },
+    {
+      "at": 12.1,
+      "until": 18,
+      "label": "question",
+      "text": "Where is this weakest?"
+    },
+    {
+      "at": 13.1,
+      "until": 18,
+      "label": "question",
+      "text": "What am I assuming without evidence?"
+    },
+    {
+      "at": 14.1,
+      "until": 18,
+      "label": "question",
+      "text": "What would a skeptical investor ask first?"
+    },
+    {
+      "at": 15.4,
+      "until": 18.45,
+      "label": "s2",
+      "text": "then fix it, and ask again"
+    },
+    {
+      "at": 18.3,
+      "until": 24.6,
+      "label": "s3",
+      "text": "Replace your thinking"
+    },
+    {
+      "at": 19.7,
+      "until": 24.6,
+      "label": "s3",
+      "text": "Test your thinking"
+    },
+    {
+      "at": 21,
+      "until": 24.9,
+      "label": "s3",
+      "text": "You do the thinking. AI helps you check it."
+    }
+  ],
+  "page_errors": []
+}

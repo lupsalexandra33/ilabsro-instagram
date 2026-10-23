@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test your thinking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Caveat:wght@400;600;700&display=block">
+<link rel="stylesheet" href="kit/il-reel-kit.css">
+<style>
+  /* Brief: ../brief.md (ig-ship). Family: chat → checklist → contrast. Lens: friendly. Ending: logo on teal
+     (last Reel was handwritten + pig, per ~/.claude/ilabs/reels-log.md). */
+  .col { position: absolute; left: 90px; width: 900px; }
+  .line { display: inline-block; }
+
+  #s1 .hook { top: 340px; font-size: 84px; }
+  #s1 .beat { top: 520px; font-size: 66px; }
+  #chat { left: 90px; top: 760px; width: 900px; height: 790px; }
+
+  #s2 .head { top: 330px; }
+  #s2 .tag { top: 440px; }
+  #s2 .q { left: 90px; width: 900px; padding: 40px 44px 40px 130px; }
+  #s2 .q1 { top: 520px; } #s2 .q2 { top: 760px; } #s2 .q3 { top: 1000px; }
+  #s2 .q .il-h3 { font-size: 50px; }
+  #s2 .tick { position: absolute; left: 44px; top: 50%; width: 52px; height: 52px; margin-top: -26px; border-radius: 50%; border: 3px solid var(--line-strong); }
+  #s2 .tick i { position: absolute; left: 10px; top: 8px; width: 32px; height: 32px; display: block; }
+  #s2 .after { top: 1300px; font-size: 72px; }
+
+  #s3 .a { top: 560px; color: var(--ink-subtle); }
+  #s3 .b { top: 720px; }
+  #s3 .body { top: 1000px; font-size: 52px; }
+</style>
+</head>
+<body>
+<div class="il-stage">
+
+  <section class="il-scene il-ground-alt" id="s1">
+    <h1 class="il-h1 col hook" id="hook">Don't ask AI to<br>think for you.</h1>
+    <h2 class="il-h2 il-teal col beat" id="beat">Ask it to test your thinking.</h2>
+    <div id="chat"></div>
+  </section>
+
+  <section class="il-scene il-ground-white" id="s2">
+    <h2 class="il-h2 col head" id="h2">What to ask instead</h2>
+    <p class="il-mono col tag" data-quiet id="tag">Examples</p>
+    <div class="il-card il-abs q q1" id="q1"><span class="tick"><i id="k1"></i></span><p class="il-h3">Where is this weakest?</p></div>
+    <div class="il-card il-abs q q2" id="q2"><span class="tick"><i id="k2"></i></span><p class="il-h3">What am I assuming without evidence?</p></div>
+    <div class="il-card il-abs q q3" id="q3"><span class="tick"><i id="k3"></i></span><p class="il-h3">What would a skeptical investor ask first?</p></div>
+    <p class="il-hand-sm col after" id="after">then fix it, and ask again</p>
+  </section>
+
+  <section class="il-scene il-ground-tint" id="s3">
+    <h2 class="il-h2 col a"><span class="line" id="ra">Replace your thinking</span></h2>
+    <h2 class="il-h2 il-teal col b"><span class="line" id="rb">Test your thinking</span></h2>
+    <p class="il-body col body" id="body3"><span style="color:var(--ink)">You do the thinking.</span> AI helps you check it.</p>
+  </section>
+
+  <section class="il-scene" id="outro"></section>
+</div>
+<script src="kit/il-reel-kit.js"></script>
+<script>
+const B = { s1: 0, s2: 11.3, s3: 18.0, outro: 24.6 };
+const END = 26.9;
+ILReel.run({ duration: END, fps: 30, title: 'Test your thinking', family: 'chat', ending: 'logo-teal' }, async (r) => {
+  ['s1', 's2', 's3'].forEach((id, i, a) => {
+    const next = B[a[i + 1]] ?? B.outro;
+    r.scene('#' + id, B[id], next + 0.45, { enter: i === 0 ? 'cut' : 'fade', exit: 'cut', inDur: 0.45 });
+  });
+
+  // S1 — two-beat hook (visible at t = 0), then an illustrative chat shows the habit and the fix
+  r.read('#hook', 0, B.s2, 'hook');
+  r.appear('#beat', 1.0, { y: 16 });
+  r.read('#beat', 1.0, B.s2, 'hook');
+  r.chat('#chat', {
+    head: { name: 'Cofounder', sub: 'Illustrative chat', initial: 'C' },
+    bottomPad: 30,
+    messages: [
+      { from: 'them', text: "Pitch is Thursday. I'll just ask AI to write our strategy.", at: 1.9, typing: 0.8, readUntil: B.s2 },
+      { from: 'me', text: 'Before that: what do we think our strategy is?', at: 3.9, readUntil: B.s2 },
+      { from: 'them', text: "No idea yet. That's why I'm asking it.", at: 5.7, typing: 0.9, readUntil: B.s2 },
+      { from: 'me', text: 'Write our rough version first.', at: 7.4, readUntil: B.s2 },
+      { from: 'me', text: 'Then ask AI to tear it apart.', at: 8.4, cls: 'bright', readUntil: B.s2 },
+      { from: 'them', text: 'Ok. Writing it now.', at: 9.6, typing: 0.7, readUntil: B.s2 + 0.45 },
+    ],
+  });
+
+  // S2 — the questions that test thinking, each ticked as it lands
+  r.appear('#h2', B.s2 + 0.25);
+  r.read('#h2', B.s2 + 0.25, B.s3, 's2');
+  r.appear('#tag', B.s2 + 0.5, { y: 8 });
+  ['#q1', '#q2', '#q3'].forEach((q, i) => {
+    const t = B.s2 + 0.8 + i * 1.0;
+    r.appear(q, t, { y: 30 });
+    r.read(q, t, B.s3, 'question');
+    r.mark('check', '#k' + (i + 1), { t: t + 0.45, width: 8, layer: q });
+  });
+  r.write('#after', B.s2 + 4.1, 0.9);
+  r.read('#after', B.s2 + 4.1, B.s3 + 0.45, 's2');
+
+  // S3 — the contrast, resolved
+  r.appear('#ra', B.s3 + 0.3, { y: 14 });
+  r.read('#ra', B.s3 + 0.3, B.outro, 's3');
+  r.mark('strike', '#ra', { t: B.s3 + 1.2, color: 'var(--ink-subtle)', width: 9 });
+  r.appear('#rb', B.s3 + 1.7, { y: 14 });
+  r.read('#rb', B.s3 + 1.7, B.outro, 's3');
+  r.mark('circle', '#rb', { t: B.s3 + 2.3, pad: 10, seed: 21 });
+  r.appear('#body3', B.s3 + 3.0, { y: 16 });
+  r.read('#body3', B.s3 + 3.0, B.outro + 0.3, 's3');
+
+  r.outro('#outro', { t: B.outro, variant: 'logo', ground: 'teal' });
+});
+</script>
+</body>
+</html>
